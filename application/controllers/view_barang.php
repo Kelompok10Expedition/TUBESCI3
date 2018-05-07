@@ -22,7 +22,7 @@ class view_barang extends CI_Controller {
 		 $this->form_validation->set_rules('input_berat','Berat','required',array('required' => 'isi %s.'));
 
  		if($this->form_validation->run()==FALSE){
-		 	$this->load->view('tabel_barang', $data);
+		 	$this->load->view('tabel_barang');
 		 }
 		 else
 		 {
