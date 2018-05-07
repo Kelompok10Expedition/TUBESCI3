@@ -60,12 +60,13 @@
           <i class="fa fa-table"></i> Data Tabel Pengiriman</div>
 
       <?php
-        echo form_open('view_pengiriman/tambah', array('enctype'=>'multipart/form-data'));
+        echo anchor('view_pengiriman/tambah', 'TAMBAH ', array('class'=>'btn btn-primary'));
        ?>
+       <br>
+       <br>
 
       <table>
         <tr>
-          <td colspan="3"><input type="submit" name="simpan" value="Tambah"></td>
         </tr>
       </table>
     </div>        

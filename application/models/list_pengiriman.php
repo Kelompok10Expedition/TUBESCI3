@@ -43,7 +43,7 @@
 				'id_pengiriman' => '',
 				'id_user' => $this->input->post('input_user'),
 				'id_type' => $this->input->post('input_type'),
-				'id_barang' => $this->input->post('input_barang'),
+				'id_barang' => $this->input->post('id_barang'),
 				'nama_penerima' => $this->input->post('input_penerima'),
 				'alamat_tujuan' => $this->input->post('input_tujuan'),
 				'tgl_kirim' => $this->input->post('input_tanggal'),

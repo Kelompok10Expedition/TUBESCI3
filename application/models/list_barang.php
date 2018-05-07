@@ -23,8 +23,8 @@
 
 		public function upload()
 		{
-			$config['upload_path'] = './gambar/';
-			$config['allowed_types'] = 'jpg|png';
+			$config['upload_path'] = './assets/img/';
+			$config['allowed_types'] = 'jpg|png|jpeg';
 			$config['max_size']  = '2048';
 			$config['remove_space']  = TRUE;
 			
@@ -52,18 +52,6 @@
 
 			$this->db->insert('barang', $data);
 		}
-
-		public function save($upload){
-		$data = array(
-			'id_barang' => $this->input->post('null'),
-			'nama_barang' => $this->input->post('user_atk'),
-			'berat_barang' => $this->input->post('type_atk'),
-			'gambar_barang' => $upload['file']['file_name']
-			
-		);
-		
-		$this->db->insert('barang', $data);
-	}
 
 	public function update($post, $id){
 		//parameter $id wajib digunakan agar program tahu ID mana yang ingin diubah datanya.

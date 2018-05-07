@@ -14,29 +14,32 @@ class view_pengiriman extends CI_Controller {
 	public function tambah()
 	{
 
+		$this->load->library('form_validation');
+		$this->form_validation->set_rules('input_user', 'User', 'required', array('required' => 'isi %s .'));
+		$this->form_validation->set_rules('input_type','Type','required',array('required' => 'isi %s.'));
+		$this->form_validation->set_rules('id_barang','Barang','required',array('required' => 'isi %s.'));
+		$this->form_validation->set_rules('input_penerima','Penerima','required',array('required' => 'isi %s.'));
+		$this->form_validation->set_rules('input_tujuan','Tujuan','required',array('required' => 'isi %s.'));
+		$this->form_validation->set_rules('input_status','Status','required',array('required' => 'isi %s.'));
+		
 		$this->load->model('list_pengiriman');
-		 $data = array();		
+		$this->load->model('list_barang');
+
+		$data = array();	
+		$data['barang'] = $this->list_barang->get_barangs();	
   
-		 $this->load->library('form_validation');
-		 $this->form_validation->set_rules('input_user', 'User', 'required', array('required' => 'isi %s .'));
-		 $this->form_validation->set_rules('input_type','Type','required',array('required' => 'isi %s.'));
-		 $this->form_validation->set_rules('input_barang','Barang','required',array('required' => 'isi %s.'));
-		 $this->form_validation->set_rules('input_penerima','Penerima','required',array('required' => 'isi %s.'));
-		 $this->form_validation->set_rules('input_tujuan','Tujuan','required',array('required' => 'isi %s.'));
-		 $this->form_validation->set_rules('input_status','Status','required',array('required' => 'isi %s.'));
 
 		 if($this->form_validation->run()==FALSE){
-		 	$this->load->view('tabel_pengiriman');
+		 	$this->load->view('tabel_pengiriman', $data);
 		 }
 		 else
 		 {
 		 	if ($this->input->post('simpan')) {
 				$this->list_pengiriman->insert();
 				redirect('view_pengiriman');
-
+		 	}
+		 	$this->load->view('tabel_pengiriman', $data);
 		 }
-		 $this->load->view('tabel_pengiriman', $data);
-		}
 	}
 
 	public function edit($id){
