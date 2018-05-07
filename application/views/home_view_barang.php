@@ -57,45 +57,49 @@
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> Data Tabel Pengiriman</div>
+          <i class="fa fa-table"></i> Data Tabel Barang</div>
 
-      <?php
-        echo form_open('view_barang/tambah', array('enctype'=>'multipart/form-data'));
+        <?php
+        echo anchor('view_barang/tambah', 'TAMBAH ', array('class'=>'btn btn-primary'));
        ?>
+       <br>
+       <br>
 
-      <table>
-        <tr>
-          <td colspan="3"><input type="submit" name="simpan" value="Tambah"></td>
-        </tr>
-      </table>
     </div>        
     </div>
-        
+        <div class="card-body">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <td> Id_Barang </td>
+                  <td> Nama_Barang </td>
+                  <td> Berat_Barang</td>
+                  <td> Gambar_barang</td>
+                  <td> Aksi</td>
+                </tr>
+              </thead>
+
+                <tbody>
+                  <?php foreach($benda as $key) : ?>
+                  <tr>
+                  <td><?php echo $key->id_barang; ?></td>
+                    <td><?php echo $key->nama_barang; ?></td>
+                    <td><?php echo $key->berat_barang; ?></td>
+                    <td><img src="assets/img/<?php echo $key->gambar_barang; ?>" width="80"></td>
+                    
+                     <td><a href='view_barang/edit/<?php echo $key->id_barang?>' class='btn btn-sm btn-info'>EDIT</a>
+                      <a href='view_barang/delete/<?php echo $key->id_barang?>' class='btn btn-sm btn-danger'>HAPUS</a></td> 
+                  </tr>
+                 <?php endforeach; ?>
+              </tbody>
+
+            </table>
+          </div>
+      </div>
+    </div>
+
 <br><br><br><br><br><br>
 
-
-
-<div class="container">
-  <div class="col-xs-12 col-sm-9 col-md-9">
-          <div class="row">
-            <div class="col-md-4">
-              
-      <?php foreach ($benda as $key): ?>
-
-              <h3><?php echo $key->nama_barang ?></h3>
-              <br>
-              <img src="img/work/<?php echo $key->gambar_barang;?>" alt="Image" width="500">
-              <p>
-                Berat Barang : <?php echo $key->berat_barang ?><br>
-              </p>
-              <br></br>
-              <!-- button delete -->
-              <a href='view_barang/edit/<?php echo $key->id_barang?>' class='btn btn-sm btn-info'>Edit</a>
-              <a href='view_barang/delete/<?php echo $key->id_barang?>' class='btn btn-sm btn-danger'>HAPUS</a><br><br>
-            </div>
-          </div>
-        </div>
-        <?php endforeach ?>
 
 <div class="gototop js-top">
     <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
