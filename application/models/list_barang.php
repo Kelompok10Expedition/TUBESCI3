@@ -23,11 +23,7 @@
 
 		public function upload()
 		{
-<<<<<<< HEAD
-			$config['upload_path'] = './img/';
-=======
 			$config['upload_path'] = './assets/img/';
->>>>>>> 520f7e127c9380f4896785b90f823fb3469b8c7c
 			$config['allowed_types'] = 'jpg|png|jpeg';
 			$config['max_size']  = '2048';
 			$config['remove_space']  = TRUE;
@@ -57,7 +53,6 @@
 			$this->db->insert('barang', $data);
 		}
 
-<<<<<<< HEAD
 	// 	public function save($upload){
 	// 	$data = array(
 	// 		'id_barang' => $this->input->post('null'),
@@ -70,8 +65,6 @@
 	// 	$this->db->insert('barang', $data);
 	// }
 
-=======
->>>>>>> 520f7e127c9380f4896785b90f823fb3469b8c7c
 	public function update($post, $id){
 		//parameter $id wajib digunakan agar program tahu ID mana yang ingin diubah datanya.
 		$nama_atk = $this->db->escape($post['nama_atk']);

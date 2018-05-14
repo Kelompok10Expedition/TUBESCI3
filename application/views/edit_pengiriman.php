@@ -52,6 +52,11 @@
 
 
 <form method="post" class="form-horizontal" enctype="multipart/form-data">
+  <?php $this->form_validation->set_error_delimiters('<div class="alert alert-warning" role="alert">','</div>'); ?>
+     <?php echo validation_errors(); ?>
+      <?php
+        echo form_open('view_pengiriman/edit', array('enctype'=>'multipart/form-data')); 
+       ?>
 <table>
         <tr>
           <td><font color="black">Id User</font></td>

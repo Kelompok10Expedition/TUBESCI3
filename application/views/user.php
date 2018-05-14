@@ -39,7 +39,7 @@
         <div class="collapse navbar-collapse navbar-right">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#header">Home</a></li>
-            <li><a href="#pengiriman">apantaa</a></li>
+            <li><a href="#pengiriman">Galeri</a></li>
             <li><a href="#barang">Barang</a></li>
             <li><a href="#our-team">Team</a></li>
             
@@ -115,57 +115,6 @@
     <!--/#about-slider-->
   </div>
   <!--/#slider-->
-
-  <div id="pengiriman">
-    <div class="container">
-      <div class="row">
-        <div class="text-center">
-          <br><br><br>
-          <h3>Pengiriman Barang</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit<br>amet consectetur adipisicing elit</p>
-        </div>
-        <div class="col-md-3 wow fadeInRight" data-wow-offset="0" data-wow-delay="0.3s">
-          <div class="text-center">
-            <div class="hi-icon-wrap hi-icon-effect">
-              <i class="fa fa-laptop"></i>
-              <h2>Responsive</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 wow fadeInRight" data-wow-offset="0" data-wow-delay="0.3s">
-          <div class="text-center">
-            <div class="hi-icon-wrap hi-icon-effect">
-              <i class="fa fa-heart-o"></i>
-              <h2>Kepercayaan</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 wow fadeInLeft" data-wow-offset="0" data-wow-delay="0.3s">
-          <div class="text-center">
-            <div class="hi-icon-wrap hi-icon-effect">
-              <i class="fa fa-shield"></i>
-              <h2>Keamanan</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 wow fadeInLeft" data-wow-offset="0" data-wow-delay="0.3s">
-          <div class="text-center">
-            <div class="hi-icon-wrap hi-icon-effect">
-              <i class="fa fa-truck"></i>
-              <h2>Kualitas</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
-            </div>
-          </div>
-        </div>
-        <br>
-        <br>
-         <a href='view_pengiriman' class='btn btn-sm btn-info'>Cek Pengiriman</a><br>
-      </div>
-    </div>
-  </div>
 
   <div id="barang">
     <div class="container">

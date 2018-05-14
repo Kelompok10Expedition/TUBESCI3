@@ -22,7 +22,6 @@
           <td><input type="number" name="input_type" value="<?php echo set_value('input_type'); ?>"></td>
         </tr>
         <tr>
-<<<<<<< HEAD
           <label>Id_barang</label>
           <select name="id_barang" class="form-control" required>
             <option value="">Pilih id barang</option>
@@ -31,16 +30,7 @@
             <?php endforeach; ?>
           </select>
         </tr>
-=======
-          <label>Id Barang</label>
-          <select name="id_barang" class="form-control" required>
-            <option value="">Pilih Kategori</option>
-            <?php foreach ($barang as $br):?> 
-              <option value="<?php echo $br->id_barang; ?>"><?php echo $br->id_barang; ?></option>
-            <?php endforeach; ?>
-            </select>
-          </tr>
->>>>>>> 520f7e127c9380f4896785b90f823fb3469b8c7c
+          
         <tr>
           <td>Nama Penerima</td>
           <td>:</td>
