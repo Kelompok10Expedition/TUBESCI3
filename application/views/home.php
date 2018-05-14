@@ -39,7 +39,7 @@
         <div class="collapse navbar-collapse navbar-right">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#header">Home</a></li>
-            <li><a href="#pengiriman">apantaa</a></li>
+            <li><a href="#pengiriman">Pengiriman</a></li>
             <li><a href="#barang">Barang</a></li>
             <li><a href="#our-team">Team</a></li>
             
