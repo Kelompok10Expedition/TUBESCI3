@@ -68,7 +68,7 @@
       
          <div class="container">
       <br>
-      
+      <table>
         <div class="form-group">
         <label>Nama : </label>
         <input type="text" name="input_nama" value="<?php echo set_value('input_nama'); ?>">
@@ -92,7 +92,7 @@
       <br><br>
       
       <input type="submit" name="simpan" class="btn btn-primary" value="simpan">
-          
+          </tabel>
   </div>
 <!--/#our-team-->
 

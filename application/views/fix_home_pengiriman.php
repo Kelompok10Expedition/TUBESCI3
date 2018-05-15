@@ -54,142 +54,72 @@
 <br><br>
 <br><br><br>
 
-<?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
 
-
-
-<main role="main">
-
-
-
-  <section class="jumbotron text-center">
-
-    <div class="container">
-
-      <h1 class="jumbotron-heading">Blog DataTables(dt_view)</h1>
-
+<div class="content-wrapper">
+    <div class="container-fluid">
       
+      <!-- Example DataTables Card-->
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-table"></i> Data Tabel Pengiriman</div>
 
+      <?php
+        echo anchor('view_pengiriman/tambah', 'TAMBAH ', array('class'=>'btn btn-primary'));
+       ?>
+       <br>
+       <br>
+
+      <table>
+        <tr>
+        </tr>
+      </table>
+    </div>        
     </div>
+        <div class="card-body">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <td> Id_pengirim </td>
+                  <td> Id_User</td>
+                  <td> Type</td>
+                  <td> ID_barang</td>
+                  <td> nama penerima</td>
+                  <td> alamat tujuan</td>
+                  <td> Tanggal kirim</td>
+                  <td> Status</td>
+                  <td> Aksi</td>
+                </tr>
+              </thead>
 
-    </section>
+                <tbody>
+                  <?php foreach($pengirim as $key) : ?>
+                  <tr>
+                  <td><?php echo $key->id_pengiriman; ?></td>
+                    <td><?php echo $key->id_user; ?></td>
+                    <td><?php echo $key->id_type; ?></td>
+                    <td><?php echo $key->id_barang; ?></td>
+                    <td><?php echo $key->nama_penerima; ?></td>
+                    <td><?php echo $key->alamat_tujuan; ?></td>
+                    <td><?php echo $key->tgl_kirim; ?></td>
+                    <td><?php echo $key->status; ?></td>
+                    <td><a href='view_pengiriman/edit/<?php echo $key->id_pengiriman?>' class='btn btn-sm btn-info'>Edit</a>
+                      <a href='view_pengiriman/delete/<?php echo $key->id_pengiriman?>' class='btn btn-sm btn-danger'>HAPUS</a></td>
+                  </tr>
+                 <?php endforeach; ?>
+              </tbody>
 
-    
-
-    <section class="py-5 bg-light">
-
-        <div class="container">
-
-            <div class="row">
-
-                <table id="dt-basic" class="table table-striped table-bordered">
-
-                    <thead>
-
-                        <tr>
-
-                            <th>Id Pengirim</th>
-
-                            <th>Id User</th>
-
-                            <th>Type</th>
-
-                            <th>Id barang</th>
-
-                            <th>Nama Penerima</th>
-
-                            <th>Alamat Tujuan</th>
-
-                            <th>Tanggal Kirim</th>
-
-                            <th>Status</th>
-
-                            <th>Action</th>
-
-                        </tr>
-
-                    </thead>
-
-                    <tbody>
-
-                        <?php foreach ($pengirim as $d) : ?>
-
-                        <tr>
-
-                            <td><?php echo $d->id_pengiriman ?></td>
-
-                            <td><?php echo $d->id_user ?></td>
-
-                            <td><?php echo $d->id_type ?></td>
-
-                            <td><?php echo $d->id_barang ?></td>
-
-                            <td><?php echo $d->nama_penerima ?></td>
-
-                            <td><?php echo $d->alamat_tujuan ?></td>
-
-                            <td><?php echo $d->tgl_kirim ?></td>
-
-                            <td><?php echo $d->status ?></td>
-
-                            <td>
-
-                                <a href="<?php echo base_url('view_pengiriman/edit/') . $d->id_pengiriman ?>" class="btn btn-sm btn-outline-primary">Edit</a> 
-
-                                <a href="<?php echo base_url('view_pengiriman/delete/') . $d->id_pengiriman ?>" class="btn btn-sm btn-outline-danger">Delete</a> 
-
-                            </td>
-
-                        </tr>
-
-                        <?php endforeach; ?>
-
-                    </tbody>
-
-                </table>
-
-            </div>
-
-        </div>
-
-    </section>
-
-  
-
-</main>
-
-<br><br>
-<?php 
+            </table>
+          </div>
+      </div>
+    </div>
+<br><br><br><br><br><br>
 
 
-   if (isset($links)) {
-
-     echo $links;
-
-   } 
-
-   ?>
-<br><br>
 
 
-<br><br><br>
-
-
-  <div class="gototop js-top">
+<div class="gototop js-top">
     <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
   </div>
-  <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/jquery.dataTables.min.css">
-  <script src="<?php echo base_url() ?>assets/js/jquery.dataTables.min.js"></script>
-  <script src="<?php echo base_url() ?>assets/js/jquery.dataTables.bootstrap4.min.js"></script>
-  <script type="text/javascript">
-      jQuery(document).ready(function(){
-
-          // Contoh inisialisasi Datatable tanpa konfigurasi apapun
-          // #dt-basic adalah id html dari tabel yang diinisialisasi
-          $('#dt-basic').DataTable();
-      });
-
-  </script>
 
     <div class="social-icon">
       <div class="container">
@@ -221,6 +151,16 @@
       </div>
     </div>
   </footer>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="assets/js/jquery-2.1.1.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/parallax.min.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/jquery.easing.min.js"></script>
+  <script type="text/javascript" src="assets/js/fliplightbox.min.js"></script>
+  <script src="assets/js/functions.js"></script>
+  <script src="assets/contactform/contactform.js"></script>
 
 </body>
 </html>

@@ -37,7 +37,7 @@
 			}
 		}
 
-		public function insert($upload)
+		public function insert()
 		{
 			$data = array(
 				'id_pengiriman' => '',
@@ -47,8 +47,7 @@
 				'nama_penerima' => $this->input->post('input_penerima'),
 				'alamat_tujuan' => $this->input->post('input_tujuan'),
 				'tgl_kirim' => $this->input->post('input_tanggal'),
-				'status' => $this->input->post('input_status')
-				
+				'status' => $this->input->post('input_status')	
 			);
 
 			$this->db->insert('pengiriman', $data);

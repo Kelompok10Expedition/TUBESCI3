@@ -62,7 +62,7 @@
             <div class="col-md-12">
               <h3><?php echo $key->nama_barang ?></h3>
               <br>
-              <img src="../../img/<?php echo $key->gambar_barang;?>" alt="Image" width="500">
+              <img src="<?php echo base_url()?>assets/img/<?php echo $key->gambar_barang;?>" alt="Image" width="500">
               
               <p>
                 Nama Barang : <?php echo $key->nama_barang ?><br>
