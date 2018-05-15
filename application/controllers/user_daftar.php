@@ -20,7 +20,8 @@ class user_daftar extends CI_Controller {
 		 $this->load->library('form_validation');
 		 $this->form_validation->set_rules('input_nama', 'Nama', 'required', array('required' => 'isi %s .'));
 		 $this->form_validation->set_rules('input_alamat','Alamat','required',array('required' => 'isi %s.'));
-		 $this->form_validation->set_rules('input_no','Nomor','required',array('required' => 'isi %s.'));
+		 $this->form_validation->set_rules('input_email','Email','required',array('required' => 'isi %s.'));
+		 $this->form_validation->set_rules('input_no','Nomer','required',array('required' => 'isi %s.'));
 
  		if($this->form_validation->run()==FALSE){
 		 	$this->load->view('user/view_daftar');
@@ -28,16 +29,12 @@ class user_daftar extends CI_Controller {
 		 else
 		 {
 		 	if ($this->input->post('simpan')) {
-			$upload = $this->list_daftar->upload();
-
-			if ($upload['result'] == 'success') {
 				$this->list_daftar->insert($upload);
 				redirect('user');
-			}else{
-				$data['message'] = $upload['error'];
-			}
+
+
 		 }
-		 $this->load->view('user', $data);
+		 $this->load->view('user/view_daftar', $data);
 		}
 	}
 

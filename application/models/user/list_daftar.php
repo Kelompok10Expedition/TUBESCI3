@@ -46,16 +46,12 @@
 				'nama_user' => $this->input->post('input_nama'),
 				'alamat_user' => $this->input->post('input_alamat'),
 				'no_telp' => $this->input->post('input_no'),
-				'gambar_user' => $upload['file']['file_name']
+				'email' => $this->input->post('input_email')
 				
 				
 			);
 
 			$this->db->insert('user', $data);
 		}
-
-	
-
-
 	}
 	?>

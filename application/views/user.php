@@ -41,7 +41,7 @@
             <li class="active"><a href="#header">Home</a></li>
             <li><a href="user_view_barang">Barang</a></li>
             <li><a href="#">Pemesanan</a></li>
-            <li><a href="user_daftar">Daftar</a></li>
+            <li><a href="<?php echo base_url()?>user_daftar/tambah">Daftar</a></li>
             
           </ul>
         </div>

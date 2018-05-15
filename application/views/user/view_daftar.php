@@ -9,12 +9,12 @@
 <title>Bikin - HTML Bootstrap Template</title>
 
 <!-- Bootstrap -->
-<link href="assets/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/font-awesome.min.css">
-<link rel="stylesheet" href="assets/css/animate.css">
-<link rel="stylesheet" href="assets/css/overwrite.css">
-<link href="assets/css/animate.min.css" rel="stylesheet">
-<link href="assets/css/style.css" rel="stylesheet" />
+<link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+<link rel="stylesheet" href="../assets/css/animate.css">
+<link rel="stylesheet" href="../assets/css/overwrite.css">
+<link href="../assets/css/animate.min.css" rel="stylesheet">
+<link href="../assets/css/style.css" rel="stylesheet" />
 <!-- =======================================================
   Theme Name: Bikin
   Theme URL: https://bootstrapmade.com/bikin-free-simple-landing-page-template/
@@ -39,9 +39,9 @@
       <div class="collapse navbar-collapse navbar-right">
         <ul class="nav navbar-nav">
           <li class="active"><a href="#header">Home</a></li>
-            <li><a href="user_view_barang">Barang</a></li>
-            <li><a href="view_pengiriman">Pemesanan</a></li>
-            <li><a href="user_daftar">Daftar</a></li>
+            <li><a href="<?php echo base_url()?>user_view_barang">Barang</a></li>
+            <li><a href="<?php echo base_url()?>view_pengiriman">Pemesanan</a></li>
+            <li><a href="<?php echo base_url()?>user_daftar/tambah">Daftar</a></li>
           
         </ul>
       </div>
@@ -61,7 +61,7 @@
 </tr>
 </thead></table>
 
-
+    <?php echo validation_errors(); ?>
     <?php
       echo form_open('user_daftar/tambah', array('enctype'=>'multipart/form-data')); 
      ?>
@@ -87,26 +87,26 @@
         <input type="text" name="input_no" value="<?php echo set_value('input_no'); ?>">
       <br>
       <br>
-      <label>Gambar Barang</label>
-        <input type="file" name="input_gambar" value="<?php echo set_value('input_barang'); ?>">
+      <label>Email :</label>
+        <input type="text" name="input_email" value="<?php echo set_value('input_email'); ?>">
       <br><br>
       
-<td colspan="3"><input class='btn' type="submit" name="simpan" value="Daftar "></td>
+      <input type="submit" name="simpan" class="btn btn-primary" value="simpan">
           
   </div>
 <!--/#our-team-->
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="assets/js/jquery-2.1.1.min.js"></script>
+<script src="../assets/js/jquery-2.1.1.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/parallax.min.js"></script>
-<script src="assets/js/wow.min.js"></script>
-<script src="assets/js/jquery.easing.min.js"></script>
-<script type="text/javascript" src="assets/js/fliplightbox.min.js"></script>
-<script src="assets/js/functions.js"></script>
-<script src="assets/contactform/contactform.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/parallax.min.js"></script>
+<script src="../assets/js/wow.min.js"></script>
+<script src="../assets/js/jquery.easing.min.js"></script>
+<script type="text/javascript" src="../assets/js/fliplightbox.min.js"></script>
+<script src="../assets/js/functions.js"></script>
+<script src="../assets/contactform/contactform.js"></script>
 
 </body>
 
