@@ -7,7 +7,7 @@ class user_daftar extends CI_Controller {
 	{
 		$this->load->model('user/list_daftar');
 		$data['benda'] = $this->list_daftar->get_daftars();
-		$this->load->view('user/view_daftar', $data);
+		$this->load->view('user/register', $data);
 	}
 
 	// Membuat fungsi create
@@ -34,7 +34,7 @@ class user_daftar extends CI_Controller {
 
 
 		 }
-		 $this->load->view('user/view_daftar', $data);
+		 $this->load->view('user/register', $data);
 		}
 	}
 

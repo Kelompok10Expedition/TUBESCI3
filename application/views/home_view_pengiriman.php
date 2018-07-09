@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php if (!$this->session->userdata('logged_in')) {
+  redirect('user/login');
+} ?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -40,7 +42,7 @@
                     </button>
           <a class="navbar-brand" href="index.html">Ekspedisi</a>
         </div>
-        
+        <li><a href="<?php echo base_url()?>user/logout" >LOGOUT</a></li>
       </div>
       <!--/.container-->
     </nav>
@@ -83,7 +85,11 @@
             <div class="row">
 
                 <table id="dt-basic" class="table table-striped table-bordered">
-
+                  <?php
+        echo anchor('view_pengiriman/tambah', 'TAMBAH ', array('class'=>'btn btn-primary'));
+       ?>
+       <br>
+       <br>
                     <thead>
 
                         <tr>

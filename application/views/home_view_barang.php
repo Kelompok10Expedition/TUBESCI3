@@ -1,3 +1,6 @@
+<?php if (!$this->session->userdata('logged_in')) {
+  redirect('user/login');
+} ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,8 +38,11 @@
                         <span class="icon-bar"></span>
                     </button>
           <a class="navbar-brand" href="index.html">Ekspedisi</a>
-        </div>
+          </div>
+          <ul>
+          <li><a href="<?php echo base_url()?>user/logout" >LOGOUT</a></li>
         
+        </ul>
       </div>
       <!--/.container-->
     </nav>

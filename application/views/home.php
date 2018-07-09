@@ -42,6 +42,8 @@
             <li><a href="#pengiriman">Pengiriman</a></li>
             <li><a href="#barang">Barang</a></li>
             <li><a href="#our-team">Team</a></li>
+            <li><a href="<?php echo base_url()?>user/register" >Register</a></li>
+            <li><a href="<?php echo base_url()?>user/login" >LOGIN</a></li>
             
           </ul>
         </div>

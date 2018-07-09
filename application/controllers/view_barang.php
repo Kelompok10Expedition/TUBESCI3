@@ -7,7 +7,10 @@ class view_barang extends CI_Controller {
 	{
 		$this->load->model('list_barang');
 		$data['benda'] = $this->list_barang->get_barangs();
+		$this->load->view('templates/header');
 		$this->load->view('home_view_barang', $data);
+		$this->load->view('templates/footer');
+		
 	}
 
 	// Membuat fungsi create
@@ -36,7 +39,9 @@ class view_barang extends CI_Controller {
 				$data['message'] = $upload['error'];
 			}
 		 }
+		 $this->load->view('templates/header');
 		 $this->load->view('tabel_barang', $data);
+		 $this->load->view('templates/footer');
 		}
 	}
 
@@ -49,8 +54,9 @@ class view_barang extends CI_Controller {
 			$this->list_barang->update($_POST, $id);
 			redirect("view_barang");
 		}
-
+		$this->load->view('templates/header');
 		$this->load->view("edit_barang",$data);
+		$this->load->view('templates/footer');
 	}
 
 	public function delete($id){

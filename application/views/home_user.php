@@ -1,3 +1,6 @@
+<?php if (!$this->session->userdata('logged_in')) {
+  redirect('User/login');
+} ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,12 +12,12 @@
   <title>Bikin - HTML Bootstrap Template</title>
 
   <!-- Bootstrap -->
-  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-  <link rel="stylesheet" href="assets/css/animate.css">
-  <link rel="stylesheet" href="assets/css/overwrite.css">
-  <link href="assets/css/animate.min.css" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet" />
+  <link href="<?php echo base_url() ?>assets/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/animate.css">
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/overwrite.css">
+  <link href="<?php echo base_url() ?>assets/css/animate.min.css" rel="stylesheet">
+  <link href="<?php echo base_url() ?>assets/css/style.css" rel="stylesheet" />
   <!-- =======================================================
     Theme Name: Bikin
     Theme URL: https://bootstrapmade.com/bikin-free-simple-landing-page-template/
@@ -34,7 +37,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-          <a class="navbar-brand" href="#">Ekspedisi</a>
+          <a class="navbar-brand" href="<?php echo base_url()?>home">Ekspedisi</a>
         </div>
         <div class="collapse navbar-collapse navbar-right">
           <ul class="nav navbar-nav">
@@ -42,6 +45,7 @@
             <li><a href="user_view_barang">Barang</a></li>
             <li><a href="#">Pemesanan</a></li>
             <li><a href="<?php echo base_url()?>user_daftar/tambah">Daftar</a></li>
+            <li><a href="<?php echo base_url()?>user/logout" >LOGOUT</a></li>
             
           </ul>
         </div>
@@ -117,15 +121,15 @@
   <!--/#slider-->
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="assets/js/jquery-2.1.1.min.js"></script>
+  <script src="<?php echo base_url() ?>assets/js/jquery-2.1.1.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/parallax.min.js"></script>
-  <script src="assets/js/wow.min.js"></script>
-  <script src="assets/js/jquery.easing.min.js"></script>
-  <script type="text/javascript" src="assets/js/fliplightbox.min.js"></script>
-  <script src="assets/js/functions.js"></script>
-  <script src="assets/contactform/contactform.js"></script>
+  <script src="<?php echo base_url() ?>assets/js/bootstrap.min.js"></script>
+  <script src="<?php echo base_url() ?>assets/js/parallax.min.js"></script>
+  <script src="<?php echo base_url() ?>assets/js/wow.min.js"></script>
+  <script src="<?php echo base_url() ?>assets/js/jquery.easing.min.js"></script>
+  <script type="text/javascript" src="<?php echo base_url() ?>assets/js/fliplightbox.min.js"></script>
+  <script src="<?php echo base_url() ?>assets/js/functions.js"></script>
+  <script src="<?php echo base_url() ?>assets/contactform/contactform.js"></script>
 
 </body>
 

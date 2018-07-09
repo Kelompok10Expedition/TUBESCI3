@@ -40,7 +40,7 @@
                     </button>
           <a class="navbar-brand" href="index.html">Ekspedisi</a>
         </div>
-        
+        <li><a href="<?php echo base_url()?>user/logout" >LOGOUT</a></li>
       </div>
       <!--/.container-->
     </nav>
