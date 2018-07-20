@@ -34,7 +34,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-          <a class="navbar-brand" href="index.html">Ekspedisi</a>
+          <a class="navbar-brand" href="<?php echo base_url()?>home/index2">Ekspedisi</a>
         </div>
         
       </div>
@@ -48,29 +48,35 @@
 
  
 <br><br>
-<br><br><br>
+<br>
 
 <form method="post" class="form-horizontal" enctype="multipart/form-data">
-<table>
-        <tr>
-          <td><font color="black">Nama Barang</font></td>
-          <td>:</td>
-          <td><input type="text" name="nama_atk" value="<?=isset($default['nama_barang'])? $default['nama_barang'] : ""?>"></td>
-        </tr>
-        <tr>
-          <td><font color="black">Berat Barang</font></td>
-          <td>:</td>
-          <td><input type="text"  name="berat_atk" class="form-control" value="<?=isset($default['berat_barang'])? $default['berat_barang'] : ""?>"</td>
-        </tr>
-        <tr>
+
+        <div class="form-group">
+
+          ---<label>Jenis Barang</label>
+
+            <input type="text" class="form-control" name="nama_atk" value="-<?=isset($default['jenis_barang'])? $default['jenis_barang'] : ""?>">
+
+          </div>
+
+          <div class="form-group">
+            ---<label>Keterangan Barang</label>
+
+            -<input type="text" class="form-control" name="keterangan_barang" value="-<?=isset($default['keterangan_barang'])? $default['keterangan_barang'] : ""?>">
+
+          </div>
+
+        
+        <!-- <tr>
           <td><font color="black">Gambar Barang</font></td>
           <td>:</td>
-          <td><input type="file"  name="gambar_atk" class="form-control" value="<?=isset($default['gambar_barang'])? $default['gambar_barang'] : ""?>"</td>
-        </tr>
-        <tr>
+          <td><input type="file"  name="gambar_atk" class="form-control" value="<?=isset($default['gambar_barang'])? $default['gambar_barang'] : ""?>"></td>
+        </tr> -->
+        
           <td colspan="3"><input type="submit" name="simpan" value="simpan"></td>
         </tr>
-      </table>
+      
       </form>
 
 

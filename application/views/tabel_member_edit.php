@@ -50,41 +50,76 @@
             
         </div>
     </nav>
-  <br><br><br><br><br>
+  
 
 
-  <div class="container">
+ 
+<br><br>
+<br><br><br>
+
+
+<form method="post" class="form-horizontal" enctype="multipart/form-data">
+  <?php $this->form_validation->set_error_delimiters('<div class="alert alert-warning" role="alert">','</div>'); ?>
      <?php echo validation_errors(); ?>
       <?php
-        echo form_open('view_barang/tambah', array('enctype'=>'multipart/form-data'));?>
-      <table>
-        <div class="form-group">
+        echo form_open('view_member/edit', array('enctype'=>'multipart/form-data')); 
+       ?>
+<table>
 
-            <label>Jenis Barang</label>
+          <div class="form-group">
+            ---<label>Nama</label>
 
-            <input type="text" class="form-control" name="input_nama" placeholder="Jenis Barang">
+            <input type="text" class="form-control" class="form-control" name="nama_atk" value="-<?=isset($default['nama'])? $default['nama'] : ""?>">
 
           </div>
 
           <div class="form-group">
-            <label>Keterangan Barang</label>
+            ---<label>Alamat</label>
 
-            <input type="text" class="form-control" name="input_berat" placeholder="keterangan Barang">
+            <input type="text" class="form-control" class="form-control" name="alamat_atk" value="-<?=isset($default['alamat'])? $default['alamat'] : ""?>">
 
           </div>
-          
+
           <div class="form-group">
-          <label>Gambar Barang</label>
+            ---<label>Nomor HP</label>
 
-            <input type="file" class="form-control" name="input_gambar" placeholder="Gambar Barang">
+            <input type="number" class="form-control" class="form-control" name="nomor_atk" value="-<?=isset($default['no_hp'])? $default['no_hp'] : ""?>">
 
           </div>
-       
+
+          <div class="form-group">
+            ---<label>Kodepos</label>
+
+            <input type="text" class="form-control" class="form-control" name="kodepos_atk" value="-<?=isset($default['kodepos'])? $default['kodepos'] : ""?>">
+
+          </div>
+
+          <div class="form-group">
+            ---<label>Email</label>
+
+            <input type="text" class="form-control" class="form-control" name="email_atk" value="-<?=isset($default['email'])? $default['email'] : ""?>">
+
+          </div>
+          <div class="form-group">
+            ---<label>Username</label>
+
+            <input type="text" class="form-control" class="form-control" name="username_atk" value="-<?=isset($default['username'])? $default['username'] : ""?>">
+
+          </div>
+          <div class="form-group">
+            ---<label>Level</label>
+
+            <input type="number" class="form-control" class="form-control" name="lecel_atk" value="-<?=isset($default['fk_level_id'])? $default['fk_level_id'] : ""?>">
+
+          </div>
+
+        
         <tr>
-          <td colspan="3"><input type="submit" name="simpan" value="Tambah"></td>
+          <td colspan="3"><input type="submit" name="simpan" value="simpan"></td>
         </tr>
       </table>
-    </div>
+      </form>
+
 
 
 <div class="gototop js-top">

@@ -5,8 +5,11 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('templates/header');
 		$this->load->view('home');
+	}
+	public function index2()
+	{
+		$this->load->view('user/admin');
 		$this->load->view('templates/footer');
 	}
 }

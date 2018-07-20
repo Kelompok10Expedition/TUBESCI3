@@ -1,4 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?><!doctype html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -71,6 +73,8 @@
 
             </div>
         </nav>
+        <br>
+        <br>
 
         <?php if($this->session->flashdata('user_registered')): ?>
           <?php echo '<div class="alert alert-success" role="alert">'.$this->session->flashdata('user_registered').'</div>'; ?>

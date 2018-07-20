@@ -245,13 +245,9 @@ class user extends CI_Controller {
             $this->load->view('users/user1', $data);
             $this->load->view('templates/footer');
         } else if ($userData['fk_level_id'] === '2'){
-            $this->load->view('templates/header');
-            $this->load->view('users/user2', $data);
-            $this->load->view('templates/footer');
+            redirect('user');
         } else if ($userData['fk_level_id'] === '3') {
-			$this->load->view('templates/header', $data, FALSE);
-			$this->load->view('user/dashboard', $data, FALSE);
-			$this->load->view('templates/footer', $data, FALSE);
+			redirect('home/index2');
 	}
 
 		}

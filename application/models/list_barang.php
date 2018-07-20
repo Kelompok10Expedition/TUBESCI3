@@ -43,8 +43,8 @@
 		{
 			$data = array(
 				'id_barang' => '',
-				'nama_barang' => $this->input->post('input_nama'),
-				'berat_barang' => $this->input->post('input_berat'),
+				'jenis_barang' => $this->input->post('input_nama'),
+				'keterangan_barang' => $this->input->post('input_berat'),
 				'gambar_barang' => $upload['file']['file_name']
 				
 				
@@ -69,15 +69,15 @@
 		//parameter $id wajib digunakan agar program tahu ID mana yang ingin diubah datanya.
 		$nama_atk = $this->db->escape($post['nama_atk']);
 		$berat_atk = $this->db->escape($post['berat_atk']);
-		$gambar_atk = $this->db->escape($post['gambar_atk']);
-		$sql = $this->db->query("UPDATE barang SET nama_barang = $nama_atk, berat_barang = $berat_atk, berat_barang = $berat_atk WHERE id_barang = ".intval($id));
+		// $gambar_atk = $this->db->escape($post['gambar_atk']);
+		$sql = $this->db->query("UPDATE barang SET jenis_barang = $nama_atk, keterangan_barang = $berat_atk WHERE id_barang = ".intval($id));
 		return true;
 	}
 
 
 		//fungsi delete
 		public function hapus($id){
-			$query = $this->db->query('DELETE from barang WHERE id_barang= '.$id);
+			$query = $this->db->query('DELETE from barang WHERE id_barang = '.$id);
 		}
 	}
 	?>

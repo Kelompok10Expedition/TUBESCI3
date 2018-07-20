@@ -42,9 +42,9 @@
         <div class="collapse navbar-collapse navbar-right">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#header">Home</a></li>
-            <li><a href="<?php echo base_url()?>user_view_barang">Barang</a></li><!-- 
+            <li><a href="user_view_barang">Barang</a></li>
             <li><a href="#">Pemesanan</a></li>
-            <li><a href="<?php echo base_url()?>user_daftar/tambah">Daftar</a></li> -->
+            <li><a href="<?php echo base_url()?>user_daftar/tambah">Daftar</a></li>
             <li><a href="<?php echo base_url()?>user/logout" >LOGOUT</a></li>
             
           </ul>

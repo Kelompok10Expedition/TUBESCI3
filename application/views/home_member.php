@@ -1,3 +1,6 @@
+<?php if (!$this->session->userdata('logged_in')) {
+  redirect('User/login');
+} ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,7 +36,8 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-          <a class="navbar-brand" href="<?php echo base_url()?>home/index2">Ekspedisi</a>
+          <a class="navbar-brand" href="<?php echo base_url()?>home">Ekspedisi</a>
+          <li><a href="<?php echo base_url()?>user/logout" >LOGOUT</a></li>
         </div>
          <div class="collapse navbar-collapse navbar-right" color="white">
           <ul class="nav navbar-nav">
@@ -50,41 +54,70 @@
             
         </div>
     </nav>
-  <br><br><br><br><br>
+	<br><br><br><br>
 
+<div class="content-wrapper">
+    <div class="container-fluid">
+      <br><br>
+      <!-- Example DataTables Card-->
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-table"></i> Data Tabel User</div>
 
-  <div class="container">
-     <?php echo validation_errors(); ?>
-      <?php
-        echo form_open('view_barang/tambah', array('enctype'=>'multipart/form-data'));?>
+          <?php
+        echo form_open('view_member/tambah', array('enctype'=>'multipart/form-data')); 
+       ?>
+
       <table>
-        <div class="form-group">
-
-            <label>Jenis Barang</label>
-
-            <input type="text" class="form-control" name="input_nama" placeholder="Jenis Barang">
-
-          </div>
-
-          <div class="form-group">
-            <label>Keterangan Barang</label>
-
-            <input type="text" class="form-control" name="input_berat" placeholder="keterangan Barang">
-
-          </div>
-          
-          <div class="form-group">
-          <label>Gambar Barang</label>
-
-            <input type="file" class="form-control" name="input_gambar" placeholder="Gambar Barang">
-
-          </div>
-       
         <tr>
           <td colspan="3"><input type="submit" name="simpan" value="Tambah"></td>
         </tr>
       </table>
+    </div>        
     </div>
+        <div class="card-body">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <td> Id User </td>
+                  <td> Fk Level</td>
+                  <td> Nama</td>
+                  <td> Alamat</td>
+                  <td> No_HP</td>
+                  <td> Kodepos</td>
+                  <td> Email</td>
+                  <td> Username</td>
+                  <td> Password</td>
+                  <td> Register_date</td>
+                </tr>
+              </thead>
+
+                <tbody>
+                  <?php foreach($artikel as $key) : ?>
+                  <tr>
+                  <td><?php echo $key->user_id; ?></td>
+                    <td><?php echo $key->fk_level_id; ?></td>
+                    <td><?php echo $key->nama; ?></td>
+                    <td><?php echo $key->alamat; ?></td>
+                    <td><?php echo $key->no_hp; ?></td>
+                    <td><?php echo $key->kodepos; ?></td>
+                    <td><?php echo $key->email; ?></td>
+                    <td><?php echo $key->username; ?></td>
+                    <td><?php echo $key->password; ?></td>
+                    <td><?php echo $key->register_date; ?></td>
+                    <td><a href='view_member/edit/<?php echo $key->user_id?>' class='btn btn-sm btn-info'>Edit</a>
+                      <a href='view_member/delete/<?php echo $key->user_id?>' class='btn btn-sm btn-danger'>HAPUS</a></td>
+                  </tr>
+                 <?php endforeach; ?>
+              </tbody>
+
+            </table>
+          </div>
+      </div>
+    </div>
+<br><br><br><br><br>
+
+  
 
 
 <div class="gototop js-top">

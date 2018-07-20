@@ -34,7 +34,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-          <a class="navbar-brand" href="index.html">Ekspedisi</a>
+          <a class="navbar-brand" href="<?php echo base_url()?>home/index2">Ekspedisi</a>
         </div>
         
       </div>
@@ -58,41 +58,55 @@
         echo form_open('view_pengiriman/edit', array('enctype'=>'multipart/form-data')); 
        ?>
 <table>
-        <tr>
-          <td><font color="black">Id User</font></td>
-          <td>:</td>
-          <td><input type="number" name="user_atk" value="<?=isset($default['id_user'])? $default['id_user'] : ""?>"></td>
-        </tr>
-        <tr>
-          <td><font color="black">Id Type</font></td>
-          <td>:</td>
-          <td><input type="number"  name="type_atk" class="form-control" value="<?=isset($default['id_type'])? $default['id_type'] : ""?>"</td>
-        </tr>
-        <tr>
-          <td><font color="black">Id Barang</font></td>
-          <td>:</td>
-          <td><input type="number"  name="barang_atk" class="form-control" value="<?=isset($default['id_barang'])? $default['id_barang'] : ""?>"</td>
-        </tr>
-        <tr>
-          <td><font color="black">Nama Penerima</font></td>
-          <td>:</td>
-          <td><input type="text"  name="penerima_atk" class="form-control" required value="<?=isset($default['nama_penerima'])? $default['nama_penerima'] : ""?>"</td>
-        </tr>
-        <tr>
-          <td><font color="black">Alamat Tujuan</font></td>
-          <td>:</td>
-          <td><input type="text"  name="tujuan_atk" class="form-control" required value="<?=isset($default['alamat_tujuan'])? $default['alamat_tujuan'] : ""?>"</td>
-        </tr>
-        <tr>
-          <td><font color="black">Tanggal Pengiriman</font></td>
-          <td>:</td>
-          <td><input type="date" required class="form-control" name="tanggal_atk" value="  <?=isset($default['tgl_kirim'])? $default['tgl_kirim'] : ""?>"</td>
-        </tr>
-        <tr>
-          <td><font color="black">Status</font></td>
-          <td>:</td>
-          <td><input type="text"  name="status_atk" class="form-control" required value="<?=isset($default['status'])? $default['status'] : ""?>"</td>
-        </tr>
+  <div class="form-group">
+
+          ---<label>Id User</label>
+
+            <input type="number" class="form-control" name="user_atk" value="-<?=isset($default['id_user'])? $default['id_user'] : ""?>">
+
+          </div>
+
+          ---<label>Id Type</label>
+
+            <input type="number" class="form-control" name="type_atk" value="-<?=isset($default['id_type'])? $default['id_type'] : ""?>">
+
+          </div>
+
+          ---<label>Id Barang</label>
+
+            <input type="number" class="form-control" name="barang_atk" value="-<?=isset($default['id_barang'])? $default['id_barang'] : ""?>">
+
+          </div>
+
+          <div class="form-group">
+            ---<label>Nama Penerima</label>
+
+            -<input type="text" class="form-control" name="penerima_atk" value="-<?=isset($default['nama_penerima'])? $default['nama_penerima'] : ""?>">
+
+          </div>
+
+          <div class="form-group">
+            ---<label>Alamat Pengiriman</label>
+
+            -<input type="text" class="form-control" name="tujuan_atk" value="-<?=isset($default['alamat_tujuan'])? $default['alamat_tujuan'] : ""?>">
+
+          </div>
+
+          <div class="form-group">
+            ---<label>Tanggal Pengiriman</label>
+
+            -<input type="date" class="form-control" name="tanggal_atk" value="-<?=isset($default['tgl_kirim'])? $default['tgl_kirim'] : ""?>">
+
+          </div>
+
+          <div class="form-group">
+            ---<label>Status</label>
+
+            -<input type="text" class="form-control" name="status_atk" value="-<?=isset($default['status'])? $default['status'] : ""?>">
+
+          </div>
+        
+        
         <tr>
           <td colspan="3"><input type="submit" name="simpan" value="simpan"></td>
         </tr>

@@ -9,12 +9,12 @@
   <title>Bikin - HTML Bootstrap Template</title>
 
   <!-- Bootstrap -->
-  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-  <link rel="stylesheet" href="assets/css/animate.css">
-  <link rel="stylesheet" href="assets/css/overwrite.css">
-  <link href="assets/css/animate.min.css" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet" />
+  <link href="<?php echo base_url() ?>assets/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/animate.css">
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/overwrite.css">
+  <link href="<?php echo base_url() ?>assets/css/animate.min.css" rel="stylesheet">
+  <link href="<?php echo base_url() ?>assets/css/style.css" rel="stylesheet" />
   <!-- =======================================================
     Theme Name: Bikin
     Theme URL: https://bootstrapmade.com/bikin-free-simple-landing-page-template/
@@ -41,9 +41,9 @@
             <li class="active"><a href="#header">Home</a></li>
             <li><a href="#pengiriman">Pengiriman</a></li>
             <li><a href="#barang">Barang</a></li>
-            <li><a href="#our-team">Team</a></li>
-            <li><a href="<?php echo base_url()?>user/register" >Register</a></li>
-            <li><a href="<?php echo base_url()?>user/login" >LOGIN</a></li>
+            <li><a href="<?php echo base_url() ?>view_member">User</a></li>
+            <!-- <li><a href="<?php echo base_url()?>user/register" >Register</a></li>
+            <li><a href="<?php echo base_url()?>user/login" >LOGIN</a></li> -->
             
           </ul>
         </div>
@@ -65,7 +65,7 @@
 
         <div class="carousel-inner">
           <div class="item active">
-            <img src="assets/img/ekspedisi/ekspedisi1.jpg" class="img-responsive" alt="">
+            <img src="<?php echo base_url() ?>assets/img/ekspedisi/ekspedisi1.jpg" class="img-responsive" alt="">
             <div class="carousel-caption">
               <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.3s">
                 <h2><span>Clean & Fully Modern Design</span></h2>
@@ -78,7 +78,7 @@
           </div>
 
           <div class="item">
-            <img src="assets/img/ekspedisi/ekspedisi2.jpg" class="img-responsive" alt="">
+            <img src="<?php echo base_url() ?>assets/img/ekspedisi/ekspedisi2.jpg" class="img-responsive" alt="">
             <div class="carousel-caption">
               <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="1.0s">
                 <h2>Fully Responsive</h2>
@@ -90,7 +90,7 @@
             </div>
           </div>
           <div class="item">
-            <img src="assets/img/ekspedisi/ekspedisi3.jpg" class="img-responsive" alt="">
+            <img src="<?php echo base_url() ?>assets/img/ekspedisi/ekspedisi3.jpg" class="img-responsive" alt="">
             <div class="carousel-caption">
               <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.3s">
                 <h2>Modern Design</h2>
@@ -164,7 +164,7 @@
         </div>
         <br>
         <br>
-         <a href='view_pengiriman' class='btn btn-sm btn-info'>Cek Pengiriman</a><br>
+         <a href='<?php echo base_url() ?>view_pengiriman' class='btn btn-sm btn-info'>Cek Pengiriman</a><br>
       </div>
     </div>
   </div>
@@ -179,29 +179,29 @@
       <div class="row">
         <figure class="effect-chico">
           <div class="col-md-3 wow fadeInUp" data-wow-offset="0" data-wow-delay="0.3s">
-            <a href="assets/img/team/1.png" class="flipLightBox">
-            <img src="assets/img/team/1.png" class="img-responsive" alt="">
+            <a href="<?php echo base_url() ?>assets/img/team/1.png" class="flipLightBox">
+            <img src="<?php echo base_url() ?>assets/img/team/1.png" class="img-responsive" alt="">
             </a>
           </div>
         </figure>
         <figure class="effect-chico">
           <div class="col-md-3 wow fadeInUp" data-wow-offset="0" data-wow-delay="0.3s">
-            <a href="assets/img/work/2.jpg" class="flipLightBox">
-            <img src="assets/img/work/2.jpg" class="img-responsive" alt="">
+            <a href="<?php echo base_url() ?>assets/img/work/2.jpg" class="flipLightBox">
+            <img src="<?php echo base_url() ?>assets/img/work/2.jpg" class="img-responsive" alt="">
             </a>
           </div>
         </figure>
         <figure class="effect-chico">
           <div class="col-md-3 wow fadeInDown" data-wow-offset="0" data-wow-delay="0.3s">
-            <a href="assets/img/work/3.jpg" class="flipLightBox">
-            <img src="assets/img/work/3.jpg" class="img-responsive" alt="">
+            <a href="<?php echo base_url() ?>assets/img/work/3.jpg" class="flipLightBox">
+            <img src="<?php echo base_url() ?>assets/img/work/3.jpg" class="img-responsive" alt="">
             </a>
           </div>
         </figure>
         <figure class="effect-chico">
           <div class="col-md-3 wow fadeInDown" data-wow-offset="0" data-wow-delay="0.3s">
-            <a href="assets/img/work/4.jpg" class="flipLightBox">
-            <img src="assets/img/work/4.jpg" class="img-responsive" alt="">
+            <a href="<?php echo base_url() ?>assets/img/work/4.jpg" class="flipLightBox">
+            <img src="<?php echo base_url() ?>assets/img/work/4.jpg" class="img-responsive" alt="">
             </a>
           </div>
         </figure>
@@ -212,65 +212,43 @@
         <div class="row">
           <figure class="effect-chico">
             <div class="col-md-3 wow fadeInUp" data-wow-offset="0" data-wow-delay="0.3s">
-              <a href="assets/img/work/5.jpg" class="flipLightBox">
-              <img src="assets/img/work/5.jpg" class="img-responsive" alt="">
+              <a href="<?php echo base_url() ?>assets/img/work/5.jpg" class="flipLightBox">
+              <img src="<?php echo base_url() ?>assets/img/work/5.jpg" class="img-responsive" alt="">
               </a>
             </div>
           </figure>
           <figure class="effect-chico">
             <div class="col-md-3 wow fadeInUp" data-wow-offset="0" data-wow-delay="0.3s">
-              <a href="assets/img/work/6.jpg" class="flipLightBox">
-              <img src="assets/img/work/6.jpg" class="img-responsive" alt="">
+              <a href="<?php echo base_url() ?>assets/img/work/6.jpg" class="flipLightBox">
+              <img src="<?php echo base_url() ?>assets/img/work/6.jpg" class="img-responsive" alt="">
               </a>
             </div>
           </figure>
           <figure class="effect-chico">
             <div class="col-md-3 wow fadeInDown" data-wow-offset="0" data-wow-delay="0.3s">
-              <a href="assets/img/work/7.jpg" class="flipLightBox">
-              <img src="assets/img/work/7.jpg" class="img-responsive" alt="">
+              <a href="<?php echo base_url() ?>assets/img/work/7.jpg" class="flipLightBox">
+              <img src="<?php echo base_url() ?>assets/img/work/7.jpg" class="img-responsive" alt="">
               </a>
             </div>
           </figure>
           <figure class="effect-chico">
             <div class="col-md-3 wow fadeInDown" data-wow-offset="0" data-wow-delay="0.3s">
-              <a href="assets/img/work/8.jpg" class="flipLightBox">
-              <img src="assets/img/work/8.jpg" class="img-responsive" alt="">
+              <a href="<?php echo base_url() ?>assets/img/work/8.jpg" class="flipLightBox">
+              <img src="<?php echo base_url() ?>assets/img/work/8.jpg" class="img-responsive" alt="">
               </a>
             </div>
           </figure>
         </div>
         <br>
         <br>
-         <a href='view_barang' class='btn btn-sm btn-info'>Cek Barang</a><br>
+         <a href='<?php echo base_url() ?>view_barang' class='btn btn-sm btn-info'>Cek Barang</a><br>
       </div>
     </div>
   </div>
   <!--/#gallery-->
 
 
-  <div id="our-team">
-    <div class="container">
-      <div class="text-center">
-        <h3>Team</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit<br>amet consectetur adipisicing elit</p>
-      </div>
-      <div class="row">
-        <div class="col-md-4 wow fadeInUp" data-wow-offset="0" data-wow-delay="0.3s">
-          <div class="text-center">
-            <img src="assets/img/team/1.png" alt="">
-            <h2>John Doe</h2>
-            <h4>Founder & CEO</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Fusce fermen tum neque a rutrum varius</p>
-          </div>
-        </div>
-        <div class="col-md-4 wow bounceInDown" data-wow-offset="0" data-wow-delay="0.3s">
-          <div class="text-center">
-            <img src="assets/img/team/2.png" alt="">
-            <h2>John Doe</h2>
-            <h4>Creative Director</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Fusce fermen tum neque a rutrum varius</p>
-          </div>
-        </div>
+
         
   <!--/#our-team-->
   
@@ -309,15 +287,15 @@
     </div>
   </footer>
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="assets/js/jquery-2.1.1.min.js"></script>
+  <script src="<?php echo base_url() ?>assets/js/jquery-2.1.1.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/parallax.min.js"></script>
-  <script src="assets/js/wow.min.js"></script>
-  <script src="assets/js/jquery.easing.min.js"></script>
-  <script type="text/javascript" src="assets/js/fliplightbox.min.js"></script>
-  <script src="assets/js/functions.js"></script>
-  <script src="assets/contactform/contactform.js"></script>
+  <script src="<?php echo base_url() ?>assets/js/bootstrap.min.js"></script>
+  <script src="<?php echo base_url() ?>assets/js/parallax.min.js"></script>
+  <script src="<?php echo base_url() ?>assets/js/wow.min.js"></script>
+  <script src="<?php echo base_url() ?>assets/js/jquery.easing.min.js"></script>
+  <script type="text/javascript" src="<?php echo base_url() ?>assets/js/fliplightbox.min.js"></script>
+  <script src="<?php echo base_url() ?>assets/js/functions.js"></script>
+  <script src="<?php echo base_url() ?>assets/contactform/contactform.js"></script>
 
 </body>
 

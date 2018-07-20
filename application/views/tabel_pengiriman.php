@@ -34,7 +34,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-          <a class="navbar-brand" href="index.html">Ekspedisi</a>
+          <a class="navbar-brand" href="<?php echo base_url()?>home/index2">Ekspedisi</a>
         </div>
         
       </div>
@@ -77,30 +77,36 @@
             <?php endforeach; ?>
           </select>
         </tr>
+
+
+        <div class="form-group">
+
+            <label>Nama Penerima</label>
+
+            <input type="text" class="form-control" name="input_penerima" placeholder="Nama Penerima">
+
+          </div>
+
+          <div class="form-group">
+            <label>Alamat Tujuan</label>
+
+            <input type="text" class="form-control" name="input_tujuan" placeholder="Alamat Tujuan">
+
+          </div>
           
-        <tr>
-          <td>Nama Penerima</td>
-          <td>:</td>
-          <td><input type="text" name="input_penerima" value="<?php echo set_value('input_penerima'); ?>"></td>
-        </tr>
-        
-        <tr>
-          <td>Alamat Tujuan</td>
-          <td>:</td>
-          <td><input type="text" name="input_tujuan" value="<?php echo set_value('input_tujuan'); ?>" ></td>
-        </tr>
-        
-        <tr>
-          <td>Tanggal Pengiriman</td>
-          <td>:</td>
-          <td><input type="date" name="input_tanggal" value="<?php echo set_value('input_tanggal'); ?>" ></td>
-        </tr>
-        
-        <tr>
-          <td>Status</td>
-          <td>:</td>
-          <td><input type="text" name="input_status" value="<?php echo set_value('input_status'); ?>" ></td>
-        </tr>
+          <div class="form-group">
+          <label>Tanggal Pengiriman</label>
+
+            <input type="date" class="form-control" name="input_tanggal" placeholder="Tanggal Pengiriman">
+
+          </div>
+          <div class="form-group">
+          <label>Status</label>
+
+            <input type="text" class="form-control" name="input_status" placeholder="Status">
+
+          </div>
+
         
         <tr>
           <td colspan="3"><input type="submit" name="simpan" value="simpan"></td>

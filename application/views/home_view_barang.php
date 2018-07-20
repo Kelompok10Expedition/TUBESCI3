@@ -37,7 +37,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-          <a class="navbar-brand" href="index.html">Ekspedisi</a>
+          <a class="navbar-brand" href="<?php echo base_url()?>home/index2">Ekspedisi</a>
           </div>
           <ul>
           <li><a href="<?php echo base_url()?>user/logout" >LOGOUT</a></li>
@@ -77,10 +77,10 @@
             <table class="table table-bordered">
               <thead>
                 <tr>
-                  <td> Id_Barang </td>
-                  <td> Nama_Barang </td>
-                  <td> Berat_Barang</td>
-                  <td> Gambar_barang</td>
+                  <td> Id Barang </td>
+                  <td> Jenis Barang </td>
+                  <td> Keterangan Barang</td>
+                  <td> Gambar barang</td>
                   <td> Aksi</td>
                 </tr>
               </thead>
@@ -89,8 +89,8 @@
                   <?php foreach($benda as $key) : ?>
                   <tr>
                   <td><?php echo $key->id_barang; ?></td>
-                    <td><?php echo $key->nama_barang; ?></td>
-                    <td><?php echo $key->berat_barang; ?></td>
+                    <td><?php echo $key->jenis_barang; ?></td>
+                    <td><?php echo $key->keterangan_barang; ?></td>
                     <td><img src="assets/img/<?php echo $key->gambar_barang; ?>" width="80"></td>
                     
                      <td><a href='view_barang/edit/<?php echo $key->id_barang?>' class='btn btn-sm btn-info'>EDIT</a>
